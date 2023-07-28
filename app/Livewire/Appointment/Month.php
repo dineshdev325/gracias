@@ -20,7 +20,7 @@ class Month extends Component
 
     public function mount($selectedDate, $days)
     {
-        $this->month = Carbon::parse('2023-07-22')->format('F');
+        $this->month = Carbon::now()->format('F');
         $this->selectedDate = $selectedDate;
         $this->days = $days;
     }

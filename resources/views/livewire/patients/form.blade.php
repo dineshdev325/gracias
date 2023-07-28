@@ -1,5 +1,5 @@
 <div>
-    <form wire:submit='patient_details'>
+    <form wire:submit='patient_details' onsubmit="Livewire.dispatch('process',{event})">
         <div class="container px-5 mx-auto">
             <div class="lg:grid-cols-2 lg:grid lg:gap-8 lg:items-center">
                 <div class="h-32 py-4">
@@ -35,7 +35,7 @@
                     <h3 class="font-medium block text-sm text-[#374151] ">Phone Number</h3>
                     <span class="text-[#B4173A]  relative bottom-1 pl-1 text-lg">*</span>
                 </div>
-                <input type="text" name="" id="" wire:model.live.debounce='phoneNumber'
+                <input type="tel" name="" id="phone" wire:model='phoneNumber'
                     class="mt-2 form-control [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none pl-4 focus:outline-none shadow-[0px_1px_3px_0px_rgba(0, 0, 0, 0.07)]  border border-gray-300 rounded-lg  w-full py-2">
                 @error('phoneNumber')
                 <p class="mt-1 text-sm text-red-500">{{$message}}</p>
@@ -44,7 +44,7 @@
 
             <div class="lg:py-3">
                 <textarea name="" id="" cols="10" rows="8" placeholder="Briefly describe the problem"
-                    wire:model.live.debounce="healthConcerns"
+                    wire:model="healthConcerns"
                     class="w-full pt-3 pl-4 placeholder:text-base focus:outline-none placeholder:font-normal  placeholder:text-[#374151]  shadow-[0px_1px_3px_0px_rgba(0, 0, 0, 0.07)] border border-gray-300 rounded-lg"></textarea>
                 @error('healthConcerns')
                 <p class="mt-1 text-sm text-red-500">{{$message}}</p>
@@ -71,5 +71,11 @@
             </a>
 
         </div>
+        
     </form>
+    @vite('resources/js/app.js')
+
+    
+        
+
 </div>

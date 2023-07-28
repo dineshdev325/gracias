@@ -24,8 +24,7 @@ class Appointment extends Component
     {
         $this->carbon = Carbon::now();
         $this->selectedDoctor = Session::get('selectedDoctor') ? Session::get('selectedDoctor') : 1;
-        $this->selectedDate =
-            $this->days = TimeSlot::where('doctors_id', $this->selectedDoctor)
+        $this->selectedDate =TimeSlot::where('doctors_id', $this->selectedDoctor)
             ->whereDate('date', '>=', Carbon::now())
             ->orderBy('date', 'asc')
             ->pluck('date')
@@ -65,6 +64,7 @@ class Appointment extends Component
 
         $this->days = TimeSlot::where('doctors_id', $this->selectedDoctor)
             ->whereDate('date', '>=', Carbon::now())
+            ->orderBy('date', 'asc')
             ->pluck('date')->unique();
 
         $this->availableTimeSlots = TimeSlot::where('doctors_id', $this->selectedDoctor)->where('date', $this->selectedDate)->where('is_available', true)->pluck('time')->toArray();

@@ -26,7 +26,6 @@ class Form extends Component
   public function patient_details()
   {
     $this->validate();
-
     //GET SESSION DATA
     $selectedDoctor = session()->get('selectedDoctor');
     $selectedDate = session()->get('selectedDate');

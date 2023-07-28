@@ -10,7 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     @vite('resources/css/app.css')
+   
+
     @livewireStyles()
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
 
@@ -35,6 +42,7 @@
 
         </div> <!-- parent div open  -->
     </div> <!-- main div close  -->
+    {{-- @vite('resources/js/app.js') --}}
     @livewireScripts()
     @livewireScriptConfig()
 
