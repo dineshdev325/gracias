@@ -104,7 +104,7 @@
 
             <!-- Button section start  -->
             <div class="flex justify-center mt-10 lg:mt-40">
-                <a href='/payments' wire:navigate
+                <a href='/payments'
                     class="text-black lg:w-[40%] bg-[#A4CB6A] font-semibold mb-6 w-full text-center py-3 rounded-lg border-[#212245] border-t border-r-4 border-b-4 border-l">
                     <button>Confirm
                         & Pay</button>

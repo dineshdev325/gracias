@@ -97,9 +97,15 @@ class StripePayment extends Component
             $date = session()->get('selectedDate');
             $time = session()->get('selectedTime');
 
+            //UPDATE AVAILABLE
             $time_slot = TimeSlot::where('time', $time)->whereDate('date', '=', $date)->get();
             $time_slot[0]->is_available = 0;
             $time_slot[0]->save();
+            
+            //UPDATE PAID
+            $consultation = Consultation::find($consultation_detail->id);
+            $consultation->is_paid = 1;
+            $consultation->save();
 
             //CREATE TWILIO MESSAGE
             $sid = getenv("TWILIO_ACCOUNT_SID");

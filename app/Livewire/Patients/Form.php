@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class Form extends Component
 {
-  #[Rule('required || alpha ||max:255')]
+  #[Rule('required ||max:255')]
   public $fullName;
 
   #[Rule('required || email')]

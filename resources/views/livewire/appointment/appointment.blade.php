@@ -1,4 +1,4 @@
-<div x-data>
+<div >
 <livewire:appointment.doctor :$selectedDoctor />
     <!-- Desktop male & female flex section start  -->
     {{-- @livewire('appointment.doctor') --}}

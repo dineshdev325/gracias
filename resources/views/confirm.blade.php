@@ -13,10 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Confirm Details</title>
     @vite('resources/css/app.css')
+    @livewireStyles()
 </head>
 
 <body>
     <livewire:confirm.confirm-detail />
+    @livewireScripts
+    @livewireScriptConfig()
+
 </body>
 
 </html>

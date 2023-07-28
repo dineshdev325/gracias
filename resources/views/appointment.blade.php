@@ -13,6 +13,7 @@
 
     {{-- ALPINE JS --}}
     @vite('resources/css/app.css')
+    @livewireStyles()
 </head>
 
 <body>
@@ -49,7 +50,10 @@
 
         </div>
         <livewire:appointment.appointment />
-
+    </div>
+    
+        @livewireScripts
+        @livewireScriptConfig()
 </body>
 
 </html>

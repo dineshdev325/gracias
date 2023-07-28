@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Document</title>
-</head>
-<link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="custom.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="/tailwind.config.js"></script>
+</head>
+
 
 <body>
     <div>
@@ -82,6 +83,9 @@
 
         </div> <!-- parent div close  -->
     </div> <!-- main div close  -->
+    @livewireScripts()
+    @livewireScriptConfig()
+
 </body>
 
 </html>

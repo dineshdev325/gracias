@@ -27,11 +27,13 @@ class Appointment extends Component
         $this->selectedDate =
             $this->days = TimeSlot::where('doctors_id', $this->selectedDoctor)
             ->whereDate('date', '>=', Carbon::now())
+            ->orderBy('date', 'asc')
             ->pluck('date')
             ->first();
 
         $this->days = TimeSlot::where('doctors_id', $this->selectedDoctor)
             ->whereDate('date', '>=', Carbon::now())
+            ->orderBy('date', 'asc')
             ->pluck('date')->unique();
 
 
@@ -82,6 +84,7 @@ class Appointment extends Component
     public function updateSelectedTime($selectedTime)
     {
         $this->selectedTime = date('H:i:s', $selectedTime);
+        
     }
     public function render()
     {
