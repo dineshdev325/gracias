@@ -82,7 +82,7 @@ class StripePayment extends Component
         try {
 
             $session = $stripe->checkout->sessions->retrieve($session_id);
-            $payment = ModelsPayment::where('transaction_id', 'like', $session_id)->where('payment_status', 'pending')->first();
+            $payment = ModelsPayment::where('transaction_id', 'like', $session_id)->first(); //->where('payment_status', 'pending')
             $payment->payment_status = 'success';
             $payment->save();
 

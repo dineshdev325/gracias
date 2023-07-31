@@ -42,8 +42,7 @@ class DoctorResource extends Resource
                 TextInput::make('whatsapp_number')
                 ->numeric()
                 ->required()
-                ->minLength(10)
-                ->maxLength(10),
+                ,
                 Textarea::make('specialization')
                 ->required()
                    ->rows(5)
@@ -51,8 +50,10 @@ class DoctorResource extends Resource
                 TextInput::make('amount')
                  ->numeric()
                  ->required(),
-              TextInput::make('image')
-                // FileUpload::make('image')
+                 Forms\Components\FileUpload::make('image')
+                 ->label('Profile Photo')
+                 ->image()
+               // FileUpload::make('image')
                 //     ->image()
                 //     ->disk('s3')
                 //     ->directory('form-attachments')

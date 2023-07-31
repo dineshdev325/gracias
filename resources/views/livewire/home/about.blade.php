@@ -12,7 +12,7 @@
         @foreach ($doctors as $doctor)
             <div class="mt-10 md:mt-0">
                 <div class="cursor-pointer">
-                    <img src="{{$doctor->image}}" alt="" class="object-cover bg-top h-[500px] w-full rounded-tl-md rounded-tr-md">
+                    <img src="storage/{{$doctor->image}}" alt="" class="object-cover bg-top h-[500px] w-full rounded-tl-md rounded-tr-md">
                 </div>
 
 

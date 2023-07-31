@@ -8,7 +8,7 @@
             @click="$dispatch('setDoctor', { selectedDoctor: {{$doctor->id}} });$wire.selectedDoctor={{$doctor->id}}" >
             {{-- selected_doctor={{$doctor->id}}; --}}
             <div class="flex gap-10">
-                <img src="{{$doctor->image}}" alt="" class="w-20 h-20 bg-top bg-cover rounded-full">
+                <img src="storage/{{$doctor->image}}" alt="" class="w-20 h-20 bg-top bg-cover rounded-full">
                 <div class="">
                     <h3 class="text-sm font-medium md:font-bold">{{$doctor->name}}</h3>
                     <span class=" text-xs text-[#6B7280]">{{$doctor->specialization}}</span>
